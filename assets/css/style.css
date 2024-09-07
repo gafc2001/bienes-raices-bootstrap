@@ -1,138 +1,176 @@
-/* Estilo General */
-body {
+<!-- Incluye Bootstrap en tu HTML -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  /* Estilos adicionales para complementar Bootstrap */
+  
+  body {
     font-family: 'Lato', sans-serif;
     background-color: #f8f9fa; /* Color de fondo suave */
     color: #333; /* Color de texto general */
     line-height: 1.6;
   }
-  
-  h1, h2, .modal-title {
+
+  .text-heading {
     color: #2c3e50; /* Color de encabezados */
   }
-  
+
   .site-header {
     background-color: #121212; /* Fondo negro */
     color: #ffffff; /* Texto blanco para contraste */
     border-bottom: 2px solid #eaeaea; /* Línea sutil en el borde inferior */
   }
 
-  .site-header .display-4 {
+  .display-4 {
     background-color: #2c3e50; /* Fondo negro */
     color: #ffffff; /* Texto blanco */
     padding: 1rem; /* Añade algo de espacio alrededor del texto */
     margin-top: 0; /* Ajusta el margen superior para eliminar cualquier espacio */
-}
-  
-    header .navegacion .nav-link,
-    header .title-header {
-    color: #2c3e50 !important; /* Asegura que los enlaces y el texto del título sean blancos */
-}
-
-  .title-header {
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-top: 1rem;
   }
-  
-  footer.site-footer {
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important; /* Asegura que los enlaces sean blancos */
+  }
+
+  .site-footer {
     background-color: #ffffff;
     border-top: 2px solid #eaeaea;
     padding-top: 20px;
   }
-  
-  footer .nav-link {
+
+  .site-footer .nav-link {
     color: #2c3e50; /* Color de enlaces en el pie de página */
     transition: color 0.3s;
   }
-  
-  footer .nav-link:hover {
+
+  .site-footer .nav-link:hover {
     color: #007bff; /* Efecto hover en los enlaces */
   }
-  
-  /* Botones personalizados */
+
+  /* Estilos adicionales para botones */
   .btn-primary {
     background-color: #3498db; /* Color azul elegante */
     border-color: #3498db;
   }
-  
+
   .btn-primary:hover {
     background-color: #2980b9; /* Efecto hover */
     border-color: #2980b9;
   }
-  
+
   .btn-success {
     background-color: #27ae60; /* Botón verde */
     border-color: #27ae60;
   }
-  
+
   .btn-success:hover {
     background-color: #1e8449; /* Efecto hover */
     border-color: #1e8449;
   }
-  
-  /* Estilos para el formulario */
-  form.contacto {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-bottom: 40px;
-  }
-  
-  form.contacto .form-label {
-    font-weight: 600;
-    color: #2c3e50; /* Color de las etiquetas */
-  }
-  
-  .form-control {
-    border-radius: 4px;
-    border: 1px solid #ddd; /* Borde suave */
-    transition: border-color 0.3s;
-  }
-  
-  .form-control:focus {
-    border-color: #3498db; /* Color del borde en foco */
-    box-shadow: none; /* Sin sombra */
-  }
-  
-  /* Estilos del Modal */
+
   .modal-header {
     background-color: #2c3e50;
     color: #ffffff;
   }
-  
+
   .modal-content {
     border-radius: 8px; /* Bordes redondeados */
   }
-  
+
   .modal-footer .btn-secondary {
     background-color: #7f8c8d;
     border-color: #7f8c8d;
   }
-  
+
   .modal-footer .btn-secondary:hover {
     background-color: #95a5a6;
     border-color: #95a5a6;
   }
-  
-  /* Estilos de la navegación */
-  .navbar-nav .nav-link {
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    color: #151414; /* Color de enlaces de navegación */
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #3498db; /* Efecto hover */
-  }
-  
-  /* Imágenes */
-  img {
-    border-radius: 8px; /* Bordes redondeados en imágenes */
+
+  .rounded-img {
+    border-radius: 8px;
     margin-bottom: 20px;
   }
-  
-  /* Utilidades de espaciado */
-  .mb-4 {
-    margin-bottom: 1.5rem !important;
+
+  .modal-alert {
+    z-index: 2050; /* Asegura que este modal esté por encima de los demás */
   }
+</style>
+
+<!-- Ejemplo de uso de Bootstrap con estilos personalizados -->
+<body>
+  <!-- Encabezado del sitio -->
+  <header class="site-header p-3">
+    <h1 class="display-4">Título del Sitio</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Mi Sitio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container my-4">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h2 class="card-title text-heading">Sección de Contenido</h2>
+        <p class="card-text">Este es un ejemplo de contenido principal usando Bootstrap.</p>
+        <button class="btn btn-primary">Botón Primario</button>
+        <button class="btn btn-success">Botón Secundario</button>
+      </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Título del Modal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Contenido del modal aquí...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar cambios</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer text-center py-4">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand" href="#">Mi Sitio</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="#">Términos</a>
+        <a class="nav-link" href="#">Política de Privacidad</a>
+      </div>
+    </nav>
+  </footer>
+
+  <!-- Scripts de Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
